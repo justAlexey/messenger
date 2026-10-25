@@ -1,0 +1,1 @@
+{"version":2,"entries":[{"package":"messenger","rootUri":"../","packageUri":"lib/"},{"package":"server","rootUri":"../apps/server/","packageUri":"lib/"},{"package":"client","rootUri":"../apps/client/","packageUri":"lib/"},{"package":"models","rootUri":"../packages/models/","packageUri":"lib/"},{"package":"db_tables","rootUri":"../packages/db_tables/","packageUri":"lib/"}]}
