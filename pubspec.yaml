@@ -7,3 +7,7 @@ workspace:
   - apps/*
   - packages/*
 melos: 
+  scripts:
+    gen:
+      exec:
+        command: dart run build_runner build

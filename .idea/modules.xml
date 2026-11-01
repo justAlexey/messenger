@@ -3,11 +3,13 @@
   <component name="ProjectModuleManager">
     <modules>
 <module fileurl="file://$PROJECT_DIR$/apps/client/melos_client.iml" filepath="$PROJECT_DIR$/apps/client/melos_client.iml"/>
-<module fileurl="file://$PROJECT_DIR$/packages/db_tables/melos_db_tables.iml" filepath="$PROJECT_DIR$/packages/db_tables/melos_db_tables.iml"/>
+<module fileurl="file://$PROJECT_DIR$/packages/database/melos_database.iml" filepath="$PROJECT_DIR$/packages/database/melos_database.iml"/>
 <module fileurl="file://$PROJECT_DIR$/packages/models/melos_models.iml" filepath="$PROJECT_DIR$/packages/models/melos_models.iml"/>
 <module fileurl="file://$PROJECT_DIR$/apps/server/melos_server.iml" filepath="$PROJECT_DIR$/apps/server/melos_server.iml"/>
-<module fileurl="file://$PROJECT_DIR$/packages/server_db/melos_server_db.iml" filepath="$PROJECT_DIR$/packages/server_db/melos_server_db.iml"/>
 <module fileurl="file://$PROJECT_DIR$/melos_messenger.iml" filepath="$PROJECT_DIR$/melos_messenger.iml"/>
+<module fileurl="file://$PROJECT_DIR$/packages/client_db/melos_client_db.iml" filepath="$PROJECT_DIR$/packages/client_db/melos_client_db.iml"/>
+<module fileurl="file://$PROJECT_DIR$/packages/db_tables/melos_db_tables.iml" filepath="$PROJECT_DIR$/packages/db_tables/melos_db_tables.iml"/>
+<module fileurl="file://$PROJECT_DIR$/packages/server_db/melos_server_db.iml" filepath="$PROJECT_DIR$/packages/server_db/melos_server_db.iml"/>
     </modules>
   </component>
 </project>

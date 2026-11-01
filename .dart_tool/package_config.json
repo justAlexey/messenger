@@ -123,7 +123,7 @@
     },
     {
       "name": "code_assets",
-      "rootUri": "file:///home/user/.pub-cache/hosted/pub.dev/code_assets-2.1.0",
+      "rootUri": "file:///home/user/.pub-cache/hosted/pub.dev/code_assets-2.2.0",
       "packageUri": "lib/",
       "languageVersion": "3.10"
     },
@@ -171,13 +171,13 @@
     },
     {
       "name": "drift",
-      "rootUri": "file:///home/user/.pub-cache/hosted/pub.dev/drift-2.35.3",
+      "rootUri": "file:///home/user/.pub-cache/hosted/pub.dev/drift-2.35.4",
       "packageUri": "lib/",
       "languageVersion": "3.10"
     },
     {
       "name": "drift_dev",
-      "rootUri": "file:///home/user/.pub-cache/hosted/pub.dev/drift_dev-2.35.2",
+      "rootUri": "file:///home/user/.pub-cache/hosted/pub.dev/drift_dev-2.35.3",
       "packageUri": "lib/",
       "languageVersion": "3.10"
     },
@@ -207,7 +207,7 @@
     },
     {
       "name": "flutter",
-      "rootUri": "file:///home/user/flutter/packages/flutter",
+      "rootUri": "file:///home/user/.flutter/packages/flutter",
       "packageUri": "lib/",
       "languageVersion": "3.11"
     },
@@ -219,7 +219,7 @@
     },
     {
       "name": "flutter_test",
-      "rootUri": "file:///home/user/flutter/packages/flutter_test",
+      "rootUri": "file:///home/user/.flutter/packages/flutter_test",
       "packageUri": "lib/",
       "languageVersion": "3.11"
     },
@@ -363,7 +363,7 @@
     },
     {
       "name": "native_toolchain_c",
-      "rootUri": "file:///home/user/.pub-cache/hosted/pub.dev/native_toolchain_c-0.19.5",
+      "rootUri": "file:///home/user/.pub-cache/hosted/pub.dev/native_toolchain_c-0.19.6",
       "packageUri": "lib/",
       "languageVersion": "3.10"
     },
@@ -471,7 +471,7 @@
     },
     {
       "name": "sky_engine",
-      "rootUri": "file:///home/user/flutter/bin/cache/pkg/sky_engine",
+      "rootUri": "file:///home/user/.flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
       "languageVersion": "3.11"
     },
@@ -507,7 +507,7 @@
     },
     {
       "name": "sqlite3",
-      "rootUri": "file:///home/user/.pub-cache/hosted/pub.dev/sqlite3-3.8.0",
+      "rootUri": "file:///home/user/.pub-cache/hosted/pub.dev/sqlite3-3.9.1",
       "packageUri": "lib/",
       "languageVersion": "3.10"
     },
@@ -656,27 +656,21 @@
       "languageVersion": "3.13"
     },
     {
-      "name": "server_db",
-      "rootUri": "../packages/server_db",
-      "packageUri": "lib/",
-      "languageVersion": "3.13"
-    },
-    {
       "name": "models",
       "rootUri": "../packages/models",
       "packageUri": "lib/",
       "languageVersion": "3.13"
     },
     {
-      "name": "db_tables",
-      "rootUri": "../packages/db_tables",
+      "name": "database",
+      "rootUri": "../packages/database",
       "packageUri": "lib/",
       "languageVersion": "3.13"
     }
   ],
   "generator": "pub",
   "generatorVersion": "3.13.7",
-  "flutterRoot": "file:///home/user/flutter",
+  "flutterRoot": "file:///home/user/.flutter",
   "flutterVersion": "3.47.8",
   "pubCache": "file:///home/user/.pub-cache"
 }

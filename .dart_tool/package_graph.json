@@ -1,11 +1,10 @@
 {
   "roots": [
     "client",
-    "db_tables",
+    "database",
     "messenger",
     "models",
-    "server",
-    "server_db"
+    "server"
   ],
   "packages": [
     {
@@ -42,21 +41,6 @@
       ]
     },
     {
-      "name": "server_db",
-      "version": "1.0.0",
-      "dependencies": [
-        "db_tables",
-        "drift",
-        "models"
-      ],
-      "devDependencies": [
-        "build_runner",
-        "drift_dev",
-        "lints",
-        "test"
-      ]
-    },
-    {
       "name": "models",
       "version": "1.0.0",
       "dependencies": [
@@ -73,7 +57,7 @@
       ]
     },
     {
-      "name": "db_tables",
+      "name": "database",
       "version": "1.0.0",
       "dependencies": [
         "drift",
@@ -155,7 +139,7 @@
     },
     {
       "name": "drift_dev",
-      "version": "2.35.2",
+      "version": "2.35.3",
       "dependencies": [
         "analyzer",
         "args",
@@ -222,7 +206,7 @@
     },
     {
       "name": "drift",
-      "version": "2.35.3",
+      "version": "2.35.4",
       "dependencies": [
         "async",
         "collection",
@@ -801,7 +785,7 @@
     },
     {
       "name": "sqlite3",
-      "version": "3.8.0",
+      "version": "3.9.1",
       "dependencies": [
         "code_assets",
         "collection",
@@ -1066,7 +1050,7 @@
     },
     {
       "name": "native_toolchain_c",
-      "version": "0.19.5",
+      "version": "0.19.6",
       "dependencies": [
         "code_assets",
         "file",
@@ -1080,7 +1064,7 @@
     },
     {
       "name": "code_assets",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "dependencies": [
         "collection",
         "hooks",
