@@ -4,7 +4,8 @@
     "db_tables",
     "messenger",
     "models",
-    "server"
+    "server",
+    "server_db"
   ],
   "packages": [
     {
@@ -41,6 +42,21 @@
       ]
     },
     {
+      "name": "server_db",
+      "version": "1.0.0",
+      "dependencies": [
+        "db_tables",
+        "drift",
+        "models"
+      ],
+      "devDependencies": [
+        "build_runner",
+        "drift_dev",
+        "lints",
+        "test"
+      ]
+    },
+    {
       "name": "models",
       "version": "1.0.0",
       "dependencies": [
@@ -64,6 +80,8 @@
         "models"
       ],
       "devDependencies": [
+        "build_runner",
+        "drift_dev",
         "lints",
         "test"
       ]
@@ -136,6 +154,73 @@
       "dependencies": []
     },
     {
+      "name": "drift_dev",
+      "version": "2.35.2",
+      "dependencies": [
+        "analyzer",
+        "args",
+        "build",
+        "build_config",
+        "charcode",
+        "cli_util",
+        "collection",
+        "dart_style",
+        "drift",
+        "io",
+        "json_annotation",
+        "logging",
+        "meta",
+        "package_config",
+        "path",
+        "pub_semver",
+        "recase",
+        "source_gen",
+        "source_span",
+        "sqlite3",
+        "sqlparser",
+        "stream_transform",
+        "string_scanner",
+        "yaml",
+        "yaml_edit"
+      ]
+    },
+    {
+      "name": "build_runner",
+      "version": "2.16.1",
+      "dependencies": [
+        "analyzer",
+        "args",
+        "async",
+        "build",
+        "build_config",
+        "build_daemon",
+        "built_collection",
+        "built_value",
+        "collection",
+        "convert",
+        "crypto",
+        "dart_style",
+        "glob",
+        "graphs",
+        "http_multi_server",
+        "io",
+        "json_annotation",
+        "logging",
+        "meta",
+        "mime",
+        "package_config",
+        "path",
+        "pool",
+        "pub_semver",
+        "shelf",
+        "shelf_web_socket",
+        "stream_transform",
+        "watcher",
+        "web_socket_channel",
+        "yaml"
+      ]
+    },
+    {
       "name": "drift",
       "version": "2.35.3",
       "dependencies": [
@@ -183,42 +268,6 @@
         "meta",
         "pub_semver",
         "source_gen"
-      ]
-    },
-    {
-      "name": "build_runner",
-      "version": "2.16.1",
-      "dependencies": [
-        "analyzer",
-        "args",
-        "async",
-        "build",
-        "build_config",
-        "build_daemon",
-        "built_collection",
-        "built_value",
-        "collection",
-        "convert",
-        "crypto",
-        "dart_style",
-        "glob",
-        "graphs",
-        "http_multi_server",
-        "io",
-        "json_annotation",
-        "logging",
-        "meta",
-        "mime",
-        "package_config",
-        "path",
-        "pool",
-        "pub_semver",
-        "shelf",
-        "shelf_web_socket",
-        "stream_transform",
-        "watcher",
-        "web_socket_channel",
-        "yaml"
       ]
     },
     {
@@ -690,26 +739,6 @@
       ]
     },
     {
-      "name": "web",
-      "version": "1.1.2",
-      "dependencies": []
-    },
-    {
-      "name": "convert",
-      "version": "3.1.2",
-      "dependencies": [
-        "typed_data"
-      ]
-    },
-    {
-      "name": "source_helper",
-      "version": "1.4.0",
-      "dependencies": [
-        "analyzer",
-        "source_gen"
-      ]
-    },
-    {
       "name": "source_gen",
       "version": "4.2.4",
       "dependencies": [
@@ -761,15 +790,50 @@
       ]
     },
     {
-      "name": "analyzer_buffer",
-      "version": "0.3.4",
+      "name": "sqlparser",
+      "version": "0.45.1",
       "dependencies": [
-        "analyzer",
+        "charcode",
         "collection",
         "meta",
-        "path",
-        "source_gen"
+        "source_span"
       ]
+    },
+    {
+      "name": "sqlite3",
+      "version": "3.8.0",
+      "dependencies": [
+        "code_assets",
+        "collection",
+        "crypto",
+        "ffi",
+        "hooks",
+        "meta",
+        "native_toolchain_c",
+        "path",
+        "typed_data",
+        "web"
+      ]
+    },
+    {
+      "name": "logging",
+      "version": "1.3.0",
+      "dependencies": []
+    },
+    {
+      "name": "stream_transform",
+      "version": "2.1.2",
+      "dependencies": []
+    },
+    {
+      "name": "recase",
+      "version": "4.1.0",
+      "dependencies": []
+    },
+    {
+      "name": "charcode",
+      "version": "1.4.0",
+      "dependencies": []
     },
     {
       "name": "watcher",
@@ -780,19 +844,16 @@
       ]
     },
     {
-      "name": "stream_transform",
-      "version": "2.1.2",
-      "dependencies": []
-    },
-    {
       "name": "mime",
       "version": "2.1.0",
       "dependencies": []
     },
     {
-      "name": "logging",
-      "version": "1.3.0",
-      "dependencies": []
+      "name": "convert",
+      "version": "3.1.2",
+      "dependencies": [
+        "typed_data"
+      ]
     },
     {
       "name": "built_value",
@@ -828,6 +889,30 @@
         "watcher",
         "web_socket_channel",
         "yaml"
+      ]
+    },
+    {
+      "name": "web",
+      "version": "1.1.2",
+      "dependencies": []
+    },
+    {
+      "name": "source_helper",
+      "version": "1.4.0",
+      "dependencies": [
+        "analyzer",
+        "source_gen"
+      ]
+    },
+    {
+      "name": "analyzer_buffer",
+      "version": "0.3.4",
+      "dependencies": [
+        "analyzer",
+        "collection",
+        "meta",
+        "path",
+        "source_gen"
       ]
     },
     {
@@ -908,11 +993,6 @@
       ]
     },
     {
-      "name": "charcode",
-      "version": "1.4.0",
-      "dependencies": []
-    },
-    {
       "name": "http_parser",
       "version": "4.1.2",
       "dependencies": [
@@ -985,6 +1065,41 @@
       ]
     },
     {
+      "name": "native_toolchain_c",
+      "version": "0.19.5",
+      "dependencies": [
+        "code_assets",
+        "file",
+        "glob",
+        "hooks",
+        "logging",
+        "meta",
+        "process",
+        "pub_semver"
+      ]
+    },
+    {
+      "name": "code_assets",
+      "version": "2.1.0",
+      "dependencies": [
+        "collection",
+        "hooks",
+        "logging"
+      ]
+    },
+    {
+      "name": "hooks",
+      "version": "2.2.0",
+      "dependencies": [
+        "collection",
+        "crypto",
+        "logging",
+        "pub_semver",
+        "record_use",
+        "yaml"
+      ]
+    },
+    {
       "name": "leak_tracker_testing",
       "version": "3.0.2",
       "dependencies": [
@@ -1005,62 +1120,11 @@
       ]
     },
     {
-      "name": "sqlite3",
-      "version": "3.8.0",
-      "dependencies": [
-        "code_assets",
-        "collection",
-        "crypto",
-        "ffi",
-        "hooks",
-        "meta",
-        "native_toolchain_c",
-        "path",
-        "typed_data",
-        "web"
-      ]
-    },
-    {
-      "name": "hooks",
-      "version": "2.2.0",
-      "dependencies": [
-        "collection",
-        "crypto",
-        "logging",
-        "pub_semver",
-        "record_use",
-        "yaml"
-      ]
-    },
-    {
       "name": "record_use",
       "version": "1.1.1",
       "dependencies": [
         "collection",
         "meta",
-        "pub_semver"
-      ]
-    },
-    {
-      "name": "code_assets",
-      "version": "2.1.0",
-      "dependencies": [
-        "collection",
-        "hooks",
-        "logging"
-      ]
-    },
-    {
-      "name": "native_toolchain_c",
-      "version": "0.19.5",
-      "dependencies": [
-        "code_assets",
-        "file",
-        "glob",
-        "hooks",
-        "logging",
-        "meta",
-        "process",
         "pub_semver"
       ]
     }

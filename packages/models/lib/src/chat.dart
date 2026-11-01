@@ -7,8 +7,8 @@ part 'generated/chat.g.dart';
 abstract class Chat with _$Chat {
   factory Chat({
     required String uuid,
-    String? title,
     required DateTime createdAt,
+    String? title,
   }) = _Chat;
   factory Chat.fromJson(Map<String, Object?> json) => _$ChatFromJson(json);
 }

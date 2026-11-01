@@ -16,7 +16,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$Chat {
 
- String get uuid; String? get title; DateTime get createdAt;
+ String get uuid; DateTime get createdAt; String? get title;
 /// Create a copy of Chat
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -30,20 +30,20 @@ $ChatCopyWith<Chat> get copyWith => _$ChatCopyWithImpl<Chat>(this as Chat, _$ide
 @override
 bool operator ==(Object other) {
   final _this = this as Chat;
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Chat&&(identical(other.uuid, _this.uuid) || other.uuid == _this.uuid)&&(identical(other.title, _this.title) || other.title == _this.title)&&(identical(other.createdAt, _this.createdAt) || other.createdAt == _this.createdAt));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Chat&&(identical(other.uuid, _this.uuid) || other.uuid == _this.uuid)&&(identical(other.createdAt, _this.createdAt) || other.createdAt == _this.createdAt)&&(identical(other.title, _this.title) || other.title == _this.title));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
 int get hashCode {
   final _this = this as Chat;
-  return Object.hash(runtimeType,_this.uuid,_this.title,_this.createdAt);
+  return Object.hash(runtimeType,_this.uuid,_this.createdAt,_this.title);
 }
 
 @override
 String toString() {
   final _this = this as Chat;
-  return 'Chat(uuid: ${_this.uuid}, title: ${_this.title}, createdAt: ${_this.createdAt})';
+  return 'Chat(uuid: ${_this.uuid}, createdAt: ${_this.createdAt}, title: ${_this.title})';
 }
 
 
@@ -54,7 +54,7 @@ abstract mixin class $ChatCopyWith<$Res>  {
   factory $ChatCopyWith(Chat value, $Res Function(Chat) _then) = _$ChatCopyWithImpl;
 @useResult
 $Res call({
- String uuid, String? title, DateTime createdAt
+ String uuid, DateTime createdAt, String? title
 });
 
 
@@ -71,12 +71,12 @@ class _$ChatCopyWithImpl<$Res>
 
 /// Create a copy of Chat
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? uuid = null,Object? title = freezed,Object? createdAt = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? uuid = null,Object? createdAt = null,Object? title = freezed,}) {
   return _then(Chat(
 uuid: null == uuid ? _self.uuid : uuid // ignore: cast_nullable_to_non_nullable
-as String,title: freezed == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
-as String?,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
-as DateTime,
+as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
+as DateTime,title: freezed == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
+as String?,
   ));
 }
 
@@ -161,10 +161,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String uuid,  String? title,  DateTime createdAt)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String uuid,  DateTime createdAt,  String? title)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _Chat() when $default != null:
-return $default(_that.uuid,_that.title,_that.createdAt);case _:
+return $default(_that.uuid,_that.createdAt,_that.title);case _:
   return orElse();
 
 }
@@ -182,10 +182,10 @@ return $default(_that.uuid,_that.title,_that.createdAt);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String uuid,  String? title,  DateTime createdAt)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String uuid,  DateTime createdAt,  String? title)  $default,) {final _that = this;
 switch (_that) {
 case _Chat():
-return $default(_that.uuid,_that.title,_that.createdAt);case _:
+return $default(_that.uuid,_that.createdAt,_that.title);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -202,10 +202,10 @@ return $default(_that.uuid,_that.title,_that.createdAt);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String uuid,  String? title,  DateTime createdAt)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String uuid,  DateTime createdAt,  String? title)?  $default,) {final _that = this;
 switch (_that) {
 case _Chat() when $default != null:
-return $default(_that.uuid,_that.title,_that.createdAt);case _:
+return $default(_that.uuid,_that.createdAt,_that.title);case _:
   return null;
 
 }
@@ -217,12 +217,12 @@ return $default(_that.uuid,_that.title,_that.createdAt);case _:
 @JsonSerializable()
 
 class _Chat implements Chat {
-   _Chat({required this.uuid, this.title, required this.createdAt});
+   _Chat({required this.uuid, required this.createdAt, this.title});
   factory _Chat.fromJson(Map<String, dynamic> json) => _$ChatFromJson(json);
 
 @override final  String uuid;
-@override final  String? title;
 @override final  DateTime createdAt;
+@override final  String? title;
 
 /// Create a copy of Chat
 /// with the given fields replaced by the non-null parameter values.
@@ -237,18 +237,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _Chat&&(identical(other.uuid, uuid) || other.uuid == uuid)&&(identical(other.title, title) || other.title == title)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _Chat&&(identical(other.uuid, uuid) || other.uuid == uuid)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.title, title) || other.title == title));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
 int get hashCode {
-    return Object.hash(runtimeType,uuid,title,createdAt);
+    return Object.hash(runtimeType,uuid,createdAt,title);
 }
 
 @override
 String toString() {
-    return 'Chat(uuid: $uuid, title: $title, createdAt: $createdAt)';
+    return 'Chat(uuid: $uuid, createdAt: $createdAt, title: $title)';
 }
 
 
@@ -259,7 +259,7 @@ abstract mixin class _$ChatCopyWith<$Res> implements $ChatCopyWith<$Res> {
   factory _$ChatCopyWith(_Chat value, $Res Function(_Chat) _then) = __$ChatCopyWithImpl;
 @override @useResult
 $Res call({
- String uuid, String? title, DateTime createdAt
+ String uuid, DateTime createdAt, String? title
 });
 
 
@@ -276,12 +276,12 @@ class __$ChatCopyWithImpl<$Res>
 
 /// Create a copy of Chat
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? uuid = null,Object? title = freezed,Object? createdAt = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? uuid = null,Object? createdAt = null,Object? title = freezed,}) {
   return _then(_Chat(
 uuid: null == uuid ? _self.uuid : uuid // ignore: cast_nullable_to_non_nullable
-as String,title: freezed == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
-as String?,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
-as DateTime,
+as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
+as DateTime,title: freezed == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
+as String?,
   ));
 }
 

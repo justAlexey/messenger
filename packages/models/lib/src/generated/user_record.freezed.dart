@@ -12,35 +12,38 @@ part of '../user_record.dart';
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
+
 /// @nodoc
 mixin _$UserRecord {
 
- User get user; String get passwordHash;
+ String get userId; String get passwordHash;
 /// Create a copy of UserRecord
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $UserRecordCopyWith<UserRecord> get copyWith => _$UserRecordCopyWithImpl<UserRecord>(this as UserRecord, _$identity);
 
+  /// Serializes this UserRecord to a JSON map.
+  Map<String, dynamic> toJson();
 
 
 @override
 bool operator ==(Object other) {
   final _this = this as UserRecord;
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is UserRecord&&(identical(other.user, _this.user) || other.user == _this.user)&&(identical(other.passwordHash, _this.passwordHash) || other.passwordHash == _this.passwordHash));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is UserRecord&&(identical(other.userId, _this.userId) || other.userId == _this.userId)&&(identical(other.passwordHash, _this.passwordHash) || other.passwordHash == _this.passwordHash));
 }
 
-
+@JsonKey(includeFromJson: false, includeToJson: false)
 @override
 int get hashCode {
   final _this = this as UserRecord;
-  return Object.hash(runtimeType,_this.user,_this.passwordHash);
+  return Object.hash(runtimeType,_this.userId,_this.passwordHash);
 }
 
 @override
 String toString() {
   final _this = this as UserRecord;
-  return 'UserRecord(user: ${_this.user}, passwordHash: ${_this.passwordHash})';
+  return 'UserRecord(userId: ${_this.userId}, passwordHash: ${_this.passwordHash})';
 }
 
 
@@ -51,11 +54,11 @@ abstract mixin class $UserRecordCopyWith<$Res>  {
   factory $UserRecordCopyWith(UserRecord value, $Res Function(UserRecord) _then) = _$UserRecordCopyWithImpl;
 @useResult
 $Res call({
- User user, String passwordHash
+ String userId, String passwordHash
 });
 
 
-$UserCopyWith<$Res> get user;
+
 
 }
 /// @nodoc
@@ -68,23 +71,14 @@ class _$UserRecordCopyWithImpl<$Res>
 
 /// Create a copy of UserRecord
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? user = null,Object? passwordHash = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? userId = null,Object? passwordHash = null,}) {
   return _then(UserRecord(
-user: null == user ? _self.user : user // ignore: cast_nullable_to_non_nullable
-as User,passwordHash: null == passwordHash ? _self.passwordHash : passwordHash // ignore: cast_nullable_to_non_nullable
+userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
+as String,passwordHash: null == passwordHash ? _self.passwordHash : passwordHash // ignore: cast_nullable_to_non_nullable
 as String,
   ));
 }
-/// Create a copy of UserRecord
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$UserCopyWith<$Res> get user {
-  
-  return $UserCopyWith<$Res>(_self.user, (value) {
-    return _then(_self.copyWith(user: value));
-  });
-}
+
 }
 
 
@@ -166,10 +160,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( User user,  String passwordHash)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String userId,  String passwordHash)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _UserRecord() when $default != null:
-return $default(_that.user,_that.passwordHash);case _:
+return $default(_that.userId,_that.passwordHash);case _:
   return orElse();
 
 }
@@ -187,10 +181,10 @@ return $default(_that.user,_that.passwordHash);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( User user,  String passwordHash)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String userId,  String passwordHash)  $default,) {final _that = this;
 switch (_that) {
 case _UserRecord():
-return $default(_that.user,_that.passwordHash);case _:
+return $default(_that.userId,_that.passwordHash);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -207,10 +201,10 @@ return $default(_that.user,_that.passwordHash);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( User user,  String passwordHash)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String userId,  String passwordHash)?  $default,) {final _that = this;
 switch (_that) {
 case _UserRecord() when $default != null:
-return $default(_that.user,_that.passwordHash);case _:
+return $default(_that.userId,_that.passwordHash);case _:
   return null;
 
 }
@@ -219,13 +213,13 @@ return $default(_that.user,_that.passwordHash);case _:
 }
 
 /// @nodoc
+@JsonSerializable()
 
+class _UserRecord implements UserRecord {
+   _UserRecord({required this.userId, required this.passwordHash});
+  factory _UserRecord.fromJson(Map<String, dynamic> json) => _$UserRecordFromJson(json);
 
-class _UserRecord extends UserRecord {
-  const _UserRecord({required this.user, required this.passwordHash}): super._();
-  
-
-@override final  User user;
+@override final  String userId;
 @override final  String passwordHash;
 
 /// Create a copy of UserRecord
@@ -234,22 +228,25 @@ class _UserRecord extends UserRecord {
 @pragma('vm:prefer-inline')
 _$UserRecordCopyWith<_UserRecord> get copyWith => __$UserRecordCopyWithImpl<_UserRecord>(this, _$identity);
 
-
+@override
+Map<String, dynamic> toJson() {
+  return _$UserRecordToJson(this, );
+}
 
 @override
 bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _UserRecord&&(identical(other.user, user) || other.user == user)&&(identical(other.passwordHash, passwordHash) || other.passwordHash == passwordHash));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _UserRecord&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.passwordHash, passwordHash) || other.passwordHash == passwordHash));
 }
 
-
+@JsonKey(includeFromJson: false, includeToJson: false)
 @override
 int get hashCode {
-    return Object.hash(runtimeType,user,passwordHash);
+    return Object.hash(runtimeType,userId,passwordHash);
 }
 
 @override
 String toString() {
-    return 'UserRecord(user: $user, passwordHash: $passwordHash)';
+    return 'UserRecord(userId: $userId, passwordHash: $passwordHash)';
 }
 
 
@@ -260,11 +257,11 @@ abstract mixin class _$UserRecordCopyWith<$Res> implements $UserRecordCopyWith<$
   factory _$UserRecordCopyWith(_UserRecord value, $Res Function(_UserRecord) _then) = __$UserRecordCopyWithImpl;
 @override @useResult
 $Res call({
- User user, String passwordHash
+ String userId, String passwordHash
 });
 
 
-@override $UserCopyWith<$Res> get user;
+
 
 }
 /// @nodoc
@@ -277,24 +274,15 @@ class __$UserRecordCopyWithImpl<$Res>
 
 /// Create a copy of UserRecord
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? user = null,Object? passwordHash = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? userId = null,Object? passwordHash = null,}) {
   return _then(_UserRecord(
-user: null == user ? _self.user : user // ignore: cast_nullable_to_non_nullable
-as User,passwordHash: null == passwordHash ? _self.passwordHash : passwordHash // ignore: cast_nullable_to_non_nullable
+userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
+as String,passwordHash: null == passwordHash ? _self.passwordHash : passwordHash // ignore: cast_nullable_to_non_nullable
 as String,
   ));
 }
 
-/// Create a copy of UserRecord
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$UserCopyWith<$Res> get user {
-  
-  return $UserCopyWith<$Res>(_self.user, (value) {
-    return _then(_self.copyWith(user: value));
-  });
-}
+
 }
 
 // dart format on
