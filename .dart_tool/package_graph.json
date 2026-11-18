@@ -1,5 +1,6 @@
 {
   "roots": [
+    "auth",
     "client",
     "database",
     "messenger",
@@ -38,6 +39,18 @@
       "devDependencies": [
         "flutter_lints",
         "flutter_test"
+      ]
+    },
+    {
+      "name": "auth",
+      "version": "1.0.0",
+      "dependencies": [
+        "database",
+        "models"
+      ],
+      "devDependencies": [
+        "lints",
+        "test"
       ]
     },
     {

@@ -656,6 +656,12 @@
       "languageVersion": "3.13"
     },
     {
+      "name": "auth",
+      "rootUri": "../packages/auth",
+      "packageUri": "lib/",
+      "languageVersion": "3.13"
+    },
+    {
       "name": "models",
       "rootUri": "../packages/models",
       "packageUri": "lib/",
